@@ -1,0 +1,23 @@
+<% include partials/_header%>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-5 offset-md-3">
+			<div class="card">
+				<div class="card-body">
+					<form action="/actualizar/<%= task._id %>" method="POST">
+						<div class="form-group">
+							<input type="text" name="titulo" placeholder="Inserta un título" class="form-control" value="<%= task.titulo %>">
+						</div>
+						<div class="form-group">
+							<textarea name="descripcion" cols="80" class="form-control" placeholder="Inserte una descripción"> <%= task.descripcion %></textarea>
+						</div>
+						<button class="btn btn-primary btn-block" type="submit">Actualizar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/_footer%>
